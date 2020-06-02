@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Poker Dice</title>
+<link />
+<style>
+.header {
+  height: 200px;
+  background-color: #629632;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-family: arial;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#diceNumbers1 {
+  color: transparent;
+}
+
+.flex-container {
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+  
+.di {
+  height: 80px;
+  width: 80px;
+  background-color: #DEDEDE;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 20px;
+  color: #999999;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+.flex-container2 {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+#b1 {
+  border: none;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #999999;
+  transition-duration: 0.4s;
+}
+
+#b1:hover {
+  background-color: #629632;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="header">
+  <h1>Poker Dice</h1>
+  <p>Click to Roll the Poker Dice</p>
+</div>  
+</header>
+
+<p id="diceNumbers1"></p>
+
+<div class="flex-container">
+  <div class="di" id="id1">*</div>
+  <div class="di" id="id2">*</div>
+  <div class="di" id="id3">*</div>
+  <div class="di" id="id4">*</div>
+  <div class="di" id="id5">*</div>
+</div>  
+
+<div class="flex-container2">
+  <p></p>
+  <button id="b1" type="button" onClick="diceNums();">Click to Roll</button>
+</div>
+
+<script type="text/javascript">
+
+var name = prompt("please enter your name here to see if this page is working");
+  alert("Hi " + name + ", so far so good...");
+
+
+function diceNums() {
+  var result = [];
+  while (result.length < 5) {
+    result.push(Math.floor(Math.random() * 6) + 1);
+  }
+  document.getElementById("diceNumbers1").innerText = [...result];
+  var a = document.getElementById("diceNumbers1").innerText;
+  console.log(a);
+  console.log(typeof a); //checking type of var yielded - a is a string and has commas between chars
+	
+  if (a.charAt(0) === "1") {
+    document.getElementById("id1").innerHTML = "9";
+    } else if (a.charAt(0) === "2") {
+        document.getElementById("id1").innerHTML = "10";
+      } else if (a.charAt(0) === "3") {
+	      document.getElementById("id1").innerHTML = "J";
+	    } else if (a.charAt(0) === "4") {
+	        document.getElementById("id1").innerHTML = "Q";
+	      } else if (a.charAt(0) === "5") {
+		      document.getElementById("id1").innerHTML = "K";
+		    } else {
+		        document.getElementById("id1").innerHTML = "A";
+		    }
+  
+  if (a.charAt(2) === "1") {
+    document.getElementById("id2").innerHTML = "9";
+    } else if (a.charAt(2) === "2") {
+        document.getElementById("id2").innerHTML = "10";
+      } else if (a.charAt(2) === "3") {
+	      document.getElementById("id2").innerHTML = "J";
+	    } else if (a.charAt(2) === "4") {
+	        document.getElementById("id2").innerHTML = "Q";
+	      } else if (a.charAt(2) === "5") {
+		      document.getElementById("id2").innerHTML = "K";
+		    } else {
+		        document.getElementById("id2").innerHTML = "A";
+		    }
+			
+  if (a.charAt(4) === "1") {
+    document.getElementById("id3").innerHTML = "9";
+    } else if (a.charAt(4) === "2") {
+        document.getElementById("id3").innerHTML = "10";
+      } else if (a.charAt(4) === "3") {
+	      document.getElementById("id3").innerHTML = "J";
+	    } else if (a.charAt(4) === "4") {
+	        document.getElementById("id3").innerHTML = "Q";
+	      } else if (a.charAt(4) === "5") {
+		      document.getElementById("id3").innerHTML = "K";
+		    } else {
+		        document.getElementById("id3").innerHTML = "A";
+		    }
+				  
+  if (a.charAt(6) === "1") {
+    document.getElementById("id4").innerHTML = "9";
+    } else if (a.charAt(6)  === "2") {
+        document.getElementById("id4").innerHTML = "10";
+      } else if (a.charAt(6)  === "3") {
+	      document.getElementById("id4").innerHTML = "J";
+	    } else if (a.charAt(6)  === "4") {
+	        document.getElementById("id4").innerHTML = "Q";
+	      } else if (a.charAt(6)  === "5") {
+		      document.getElementById("id4").innerHTML = "K";
+		    } else {
+		        document.getElementById("id4").innerHTML = "A";
+		    }		
+		  
+  if (a.charAt(8)  === "1") {
+    document.getElementById("id5").innerHTML = "9";
+    } else if (a.charAt(8)=== "2") {
+        document.getElementById("id5").innerHTML = "10";
+      } else if (a.charAt(8)=== "3") {
+	      document.getElementById("id5").innerHTML = "J";
+	    } else if (a.charAt(8) === "4") {
+	        document.getElementById("id5").innerHTML = "Q";
+	      } else if (a.charAt(8) === "5") {
+		      document.getElementById("id5").innerHTML = "K";
+		    } else {
+		        document.getElementById("id5").innerHTML = "A";
+		    }
+			
+}
+diceNums();	
+
+</script>
+</body>
+</html>
